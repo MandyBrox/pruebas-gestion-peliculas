@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de películas</title>
+</head>
+<body>
+    <h1>Mi colección de películas</h1>
+
+<form action="/" method="GET">
+    <label for="director">Buscar por director:</label>
+    <input type="text" id="director" name="director">
+
+    <button type="submit">Buscar</button>
+</form>
+
+    {% for pelicula in peliculas %}
+        <article>
+            <h2><a href="/movie/{{ pelicula._id }}">{{ pelicula.title }}</a></h2>
+            <p>Año: {{ pelicula.year }}</p>
+            <p>Director: {{ pelicula.director }}</p>
+            <p>Duración: {{ pelicula.duration }} minutos</p>
+            <p>Valoración: {{ pelicula.rate }}</p>
+        </article>
+    {% endfor %}
+
+</body>
+</html>

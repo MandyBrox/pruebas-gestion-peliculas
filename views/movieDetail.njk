@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ pelicula.title }}</title>
+</head>
+<body>
+    <h1>{{ pelicula.title }}</h1>
+
+    <img src="{{ pelicula.poster }}" alt="Cartel de {{ pelicula.title }}" width="200">
+
+    <p><strong>Año:</strong> {{ pelicula.year }}</p>
+    <p><strong>Director:</strong> {{ pelicula.director }}</p>
+    <p><strong>Duración:</strong> {{ pelicula.duration }} minutos</p>
+    <p><strong>Género:</strong> {{ pelicula.genre | join(', ') }}</p>
+    <p><strong>Valoración:</strong> {{ pelicula.rate }}</p>
+
+    <p>
+        <a href="/movie/{{ pelicula._id }}/edit">
+            <button type="button">Editar película</button>
+        </a>
+    </p>
+
+    <p>
+        <form action="/movie/{{ pelicula._id }}/delete" method="POST">
+            <button type="submit">Eliminar película</button>
+        </form>
+    </p>
+
+    <p>
+        <a href="/">
+            <button type="button">Volver al listado</button>
+        </a>
+    </p>
+</body>
+</html>

@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar película</title>
+</head>
+<body>
+    <h1>Editar película: {{ pelicula.title }}</h1>
+
+    <form action="/movie/{{ pelicula._id }}/edit" method="POST">
+
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title" value="{{ pelicula.title }}" required>
+
+        <br><br>
+
+        <label for="year">Año:</label>
+        <input type="number" id="year" name="year" min="1888" max="2027" value="{{ pelicula.year }}" required>
+
+        <br><br>
+
+        <label for="director">Director:</label>
+        <input type="text" id="director" name="director" value="{{ pelicula.director }}" required>
+
+        <br><br>
+
+        <label for="duration">Duración (minutos):</label>
+        <input type="number" id="duration" name="duration" value="{{ pelicula.duration }}" required>
+
+        <br><br>
+
+        <label for="genre">Géneros (separados por comas):</label>
+        <input type="text" id="genre" name="genre" value="{{ pelicula.genre | join(', ') }}" required>
+
+        <br><br>
+
+        <label for="rate">Valoración:</label>
+        <input type="number" id="rate" name="rate" min="0" max="10" step="0.1" value="{{ pelicula.rate }}" required>
+
+        <br><br>
+
+        <label for="poster">URL del cartel:</label>
+        <input type="url" id="poster" name="poster" value="{{ pelicula.poster }}" required>
+
+        <br><br>
+
+        <button type="submit">Guardar cambios</button>
+    </form>
+
+    <p><a href="/movie/{{ pelicula._id }}">Cancelar</a></p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+
+{
+  "name": "gestion-peliculas",
+  "version": "1.0.0",
+  "description": "Aplicación de gestión de películas con Node.js, Express, MongoDB y MVC",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "5.3.0",
+    "mongoose": "^9.12.1",
+    "nunjucks": "^3.2.4"
+  }
+}
