@@ -1,0 +1,360 @@
+[{
+	"_id": {
+		"$oid": "6af59e6cc611e45ae1cb0b0a"
+	},
+	"title": "The Shawshank Redemption",
+	"year": 1994,
+	"director": "Frank Darabont",
+	"duration": 142,
+	"genre": [
+		"Drama"
+	],
+	"rate": 9.3,
+	"poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+	"__v": 0,
+	"createdAt": {
+		"$date": "2026-11-12T11:09:32.865Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-12T11:09:32.865Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6af59e6cc611e45ae1cb0b0b"
+	},
+	"title": "The Dark Knight",
+	"year": 2008,
+	"director": "Christopher Nolan",
+	"duration": 152,
+	"genre": [
+		"Action",
+		"Crime",
+		"Drama"
+	],
+	"rate": 9,
+	"poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
+	"__v": 0,
+	"createdAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6af59e6cc611e45ae1cb0b0c"
+	},
+	"title": "Inception",
+	"year": 2010,
+	"director": "Christopher Nolan",
+	"duration": 148,
+	"genre": [
+		"Action",
+		"Adventure",
+		"Sci-Fi"
+	],
+	"rate": 8.8,
+	"poster": "https://m.media-amazon.com/images/I/91Rc8cAmnAL._AC_UF1000,1000_QL80_.jpg",
+	"__v": 0,
+	"createdAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6af59e6cc611e45ae1cb0b0d"
+	},
+	"title": "Pulp Fiction",
+	"year": 1994,
+	"director": "Quentin Tarantino",
+	"duration": 154,
+	"genre": [
+		"Crime",
+		"Drama"
+	],
+	"rate": 8.9,
+	"poster": "https://www.themoviedb.org/t/p/original/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+	"__v": 0,
+	"createdAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6af59e6cc611e45ae1cb0b0e"
+	},
+	"title": "Forrest Gump",
+	"year": 1994,
+	"director": "Robert Zemeckis",
+	"duration": 142,
+	"genre": [
+		"Drama",
+		"Romance"
+	],
+	"rate": 8.8,
+	"poster": "https://i.ebayimg.com/images/g/qR8AAOSwkvRZzuMD/s-l1600.jpg",
+	"__v": 0,
+	"createdAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6af59e6cc611e45ae1cb0b0f"
+	},
+	"title": "Gladiator",
+	"year": 2000,
+	"director": "Ridley Scott",
+	"duration": 155,
+	"genre": [
+		"Action",
+		"Adventure",
+		"Drama"
+	],
+	"rate": 8.5,
+	"poster": "https://img.fruugo.com/product/0/60/14417600_max.jpg",
+	"__v": 0,
+	"createdAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6af59e6cc611e45ae1cb0b10"
+	},
+	"title": "The Matrix",
+	"year": 1999,
+	"director": "Lana Wachowski",
+	"duration": 136,
+	"genre": [
+		"Action",
+		"Sci-Fi"
+	],
+	"rate": 8.7,
+	"poster": "https://i.ebayimg.com/images/g/QFQAAOSwAQpfjaA6/s-l1200.jpg",
+	"__v": 0,
+	"createdAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6af59e6cc611e45ae1cb0b11"
+	},
+	"title": "Interstellar",
+	"year": 2014,
+	"director": "Christopher Nolan",
+	"duration": 169,
+	"genre": [
+		"Adventure",
+		"Drama",
+		"Sci-Fi"
+	],
+	"rate": 8.6,
+	"poster": "https://m.media-amazon.com/images/I/91obuWzA3XL._AC_UF1000,1000_QL80_.jpg",
+	"__v": 0,
+	"createdAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6af59e6cc611e45ae1cb0b12"
+	},
+	"title": "The Lord of the Rings: The Return of the King",
+	"year": 2003,
+	"director": "Peter Jackson",
+	"duration": 201,
+	"genre": [
+		"Action",
+		"Adventure",
+		"Drama"
+	],
+	"rate": 8.9,
+	"poster": "https://i.ebayimg.com/images/g/0hoAAOSwe7peaMLW/s-l1600.jpg",
+	"__v": 0,
+	"createdAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6af59e6cc611e45ae1cb0b13"
+	},
+	"title": "The Lion King",
+	"year": 1994,
+	"director": "Roger Allers, Rob Minkoff",
+	"duration": 88,
+	"genre": [
+		"Animation",
+		"Adventure",
+		"Drama"
+	],
+	"rate": 8.5,
+	"poster": "https://m.media-amazon.com/images/I/81BMmrwSFOL._AC_UF1000,1000_QL80_.jpg",
+	"__v": 0,
+	"createdAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6af59e6cc611e45ae1cb0b14"
+	},
+	"title": "The Avengers",
+	"year": 2012,
+	"director": "Joss Whedon",
+	"duration": 143,
+	"genre": [
+		"Action",
+		"Adventure",
+		"Sci-Fi"
+	],
+	"rate": 8,
+	"poster": "https://img.fruugo.com/product/7/41/14532417_max.jpg",
+	"__v": 0,
+	"createdAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6af59e6cc611e45ae1cb0b15"
+	},
+	"title": "Jurassic Park",
+	"year": 1993,
+	"director": "Steven Spielberg",
+	"duration": 127,
+	"genre": [
+		"Adventure",
+		"Sci-Fi"
+	],
+	"rate": 8.1,
+	"poster": "https://vice-press.com/cdn/shop/products/Jurassic-Park-Editions-poster-florey.jpg?v=1654518755&width=1024",
+	"__v": 0,
+	"createdAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-12T11:09:32.867Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6af59e6cc611e45ae1cb0b16"
+	},
+	"title": "Titanic",
+	"year": 1997,
+	"director": "James Cameron",
+	"duration": 195,
+	"genre": [
+		"Drama",
+		"Romance"
+	],
+	"rate": 7.8,
+	"poster": "https://i.pinimg.com/originals/42/42/65/4242658e6f1b0d6322a4a93e0383108b.png",
+	"__v": 0,
+	"createdAt": {
+		"$date": "2026-11-12T11:09:32.868Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-12T11:09:32.868Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6af59e6cc611e45ae1cb0b17"
+	},
+	"title": "The Social Network",
+	"year": 2010,
+	"director": "David Fincher",
+	"duration": 120,
+	"genre": [
+		"Biography",
+		"Drama"
+	],
+	"rate": 7.7,
+	"poster": "https://i.pinimg.com/originals/7e/37/b9/7e37b994b613e94cba64f307b1983e39.jpg",
+	"__v": 0,
+	"createdAt": {
+		"$date": "2026-11-12T11:09:32.868Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-12T11:09:32.868Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6af59e6cc611e45ae1cb0b18"
+	},
+	"title": "Avatar",
+	"year": 2009,
+	"director": "James Cameron",
+	"duration": 162,
+	"genre": [
+		"Action",
+		"Adventure",
+		"Fantasy"
+	],
+	"rate": 7.8,
+	"poster": "https://i.etsystatic.com/35681979/r/il/dfe3ba/3957859451/il_fullxfull.3957859451_h27r.jpg",
+	"__v": 0,
+	"createdAt": {
+		"$date": "2026-11-12T11:09:32.868Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-12T11:09:32.868Z"
+	}
+},
+{
+	"_id": {
+		"$oid": "6af5f534e8cb29e6039dcc76"
+	},
+	"title": "The Grand Budapest Hotel",
+	"year": 2014,
+	"director": "Wes Anderson",
+	"duration": 99,
+	"genre": [
+		"Comedy",
+		"Drama"
+	],
+	"rate": 8.1,
+	"poster": "https://example.com/poster.jpg",
+	"createdAt": {
+		"$date": "2026-11-12T17:19:48.488Z"
+	},
+	"updatedAt": {
+		"$date": "2026-11-12T17:19:48.488Z"
+	},
+	"__v": 0
+}]
+

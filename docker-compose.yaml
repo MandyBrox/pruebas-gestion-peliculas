@@ -1,11 +1,20 @@
 services:
   mongo:
-    image: mongo:8.0
+    build: ./mongo
     restart: unless-stopped
     ports:
       - "127.0.0.1:27018:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
     volumes:
-      - mongo-peliculas-data:/data/db
+      - mongo-peliculas-data-nuevo:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "-u", "${MONGO_USER}", "-p", "${MONGO_PASSWORD}", "--authenticationDatabase", "admin", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
 
   app:
     build: .
@@ -14,9 +23,10 @@ services:
       - "3000:3000"
     environment:
       PORT: 3000
-      MONGODB_URI: mongodb://mongo:27017/movies
+      MONGODB_URI: mongodb://${MONGO_USER}:${MONGO_PASSWORD}@mongo:27017/movies?authSource=admin
     depends_on:
-      - mongo
+      mongo:
+        condition: service_healthy
 
 volumes:
-  mongo-peliculas-data:
+  mongo-peliculas-data-nuevo:
