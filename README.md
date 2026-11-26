@@ -1,77 +1,121 @@
-# Gestión de películas
+# Gestión de películas: Node.js + MongoDB con Docker
 
-Aplicación web desarrollada con Node.js, Express y MongoDB para gestionar una colección de películas mediante operaciones CRUD (crear, consultar, actualizar y eliminar).
+Aplicación web desarrollada con Node.js, Express, MongoDB y Nunjucks para gestionar una colección de películas mediante operaciones CRUD (crear, consultar, modificar y eliminar).
 
-El proyecto está organizado siguiendo el patrón **MVC (Modelo-Vista-Controlador)** y utiliza Nunjucks para generar las páginas HTML.
+El proyecto sigue el patrón MVC (Modelo-Vista-Controlador).
 
-## Requisitos previos
+Las imágenes Docker están publicadas en GitHub Container Registry (GHCR):
 
-Para ejecutar el proyecto es necesario tener instalado:
+- `ghcr.io/mandybrox/peliculas-app:1.0`: aplicación Node.js.
+- `ghcr.io/mandybrox/peliculas-mongo:1.0`: MongoDB 8.0 con los datos iniciales de películas.
 
-- Node.js
-- npm
-- MongoDB
+## Requisitos
 
-## Instalación
+Solo es necesario tener instalado Docker con Docker Compose.
 
-1. Descargar o clonar el proyecto.
-2. Abrir una terminal en la carpeta del proyecto.
-3. Instalar las dependencias:
+No hace falta instalar Node.js, npm ni MongoDB en el ordenador.
+
+## Puesta en marcha
+
+Clonar el repositorio:
 
 ```bash
-npm install
+git clone https://github.com/MandyBrox/pruebas-gestion-peliculas.git
+cd pruebas-gestion-peliculas
 ```
 
-## Configuración
+Crear el archivo `.env` a partir del ejemplo:
 
-Crear un archivo `.env` en la carpeta principal del proyecto, tomando como referencia `.env.example`.
-
-Configurar las siguientes variables:
-
-```env
-PORT=3000
-MONGODB_URI=mongodb://127.0.0.1:27017/nombre_base_datos
+```bash
+cp .env.example .env
 ```
 
-Asegurarse de que MongoDB está en funcionamiento antes de iniciar la aplicación.
+En PowerShell de Windows se puede utilizar:
 
-Si se utiliza Docker Compose, se puede iniciar el servicio de MongoDB con:
+```powershell
+Copy-Item .env.example .env
+```
+
+Se recomienda editar `.env` y cambiar la contraseña de ejemplo por una propia.
+
+Descargar las imágenes desde GHCR:
+
+```bash
+docker compose pull
+```
+
+Iniciar los contenedores:
 
 ```bash
 docker compose up -d
 ```
 
-## Ejecución
-
-Iniciar el servidor con:
-
-```bash
-npm start
-```
-
 La aplicación estará disponible en:
 
-- Interfaz web: http://localhost:3000/
-- API: http://localhost:3000/movies
+**http://localhost:3000**
+
+## Comprobar el funcionamiento
+
+Para comprobar el estado de los contenedores:
+
+```bash
+docker compose ps
+```
+
+MongoDB debe aparecer como `healthy` y la aplicación como `running` o `Up`.
+
+La aplicación incluye 16 películas iniciales que se importan automáticamente cuando MongoDB utiliza un volumen vacío por primera vez.
+
+## Detener la aplicación
+
+Para detener los contenedores:
+
+```bash
+docker compose down
+```
+
+Los datos de MongoDB se conservan en el volumen de Docker.
+
+Para detener los contenedores y eliminar también el volumen con los datos:
+
+```bash
+docker compose down -v
+```
+
+**Atención:** esta última operación elimina los datos almacenados en MongoDB. Al volver a iniciar el proyecto se importarán de nuevo los datos iniciales.
 
 ## Funcionalidades
 
 La aplicación permite:
 
 - Consultar todas las películas.
-- Consultar una película por su identificador.
+- Consultar los detalles de una película.
 - Añadir películas.
 - Modificar películas existentes.
 - Eliminar películas.
-- Gestionar las películas desde una interfaz web.
+- Gestionar la colección desde una interfaz web.
 
 ## Estructura del proyecto
 
-- **models/**: contiene el modelo Movie y el esquema de datos de Mongoose.
-- **controllers/**: contiene las funciones que implementan la lógica de las operaciones CRUD.
-- **routes/**: define las rutas de la API y de la interfaz web y las asocia con sus controladores.
-- **views/**: contiene las plantillas Nunjucks que generan las páginas HTML.
-- **app.js**: configura Express, establece la conexión con MongoDB y registra las rutas.
+```text
+pruebas-gestion-peliculas/
+├── controllers/       # Lógica de las operaciones
+├── models/            # Modelo y esquema de películas
+├── routes/            # Rutas de la aplicación
+├── views/             # Plantillas Nunjucks
+├── mongo/
+│   ├── Dockerfile     # Imagen personalizada de MongoDB
+│   ├── movies.json    # Datos iniciales
+│   └── 01-importar-movies.sh
+├── .dockerignore
+├── .env.example
+├── .gitignore
+├── app.js
+├── Dockerfile         # Imagen de la aplicación Node.js
+├── docker-compose.yaml
+├── package.json
+└── README.md
+```
 
 ## Tecnologías utilizadas
 
@@ -80,4 +124,6 @@ La aplicación permite:
 - MongoDB
 - Mongoose
 - Nunjucks
-- dotenv
+- Docker
+- Docker Compose
+- GitHub Container Registry (GHCR)
